@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drope Tattoo | Arte Autoral na Pele | @drope.tattoo777</title>
+  <meta name="description" content="Drope Tattoo — arte autoral na pele. Blackwork, autoral e muito mais. Projetos exclusivos e personalizados. Agende pelo WhatsApp." />
+  <meta name="keywords" content="drope tattoo, tatuagem autoral, blackwork, tatuagem personalizada, drope.tattoo777" />
+  <meta name="author" content="Drope Tattoo" />
+  <meta property="og:title" content="Drope Tattoo | Arte Autoral na Pele" />
+  <meta property="og:description" content="Projetos exclusivos. Cada traço tem intenção. @drope.tattoo777" />
+  <meta property="og:image" content="/images/tattoos/theise-tatto.jpg" />
+  <meta property="og:url" content="https://dropetattoo.com.br" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#hero" class="nav__logo">DROPE<em>TATTOO</em></a>
+  <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#processo">Como Agendar</a></li>
+    <li><a href="#localizacao">Localização</a></li>
+    <li><a href="#orcamento" class="nav__cta">Orçamento</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__bg">
+    <img src="/images/tattoos/theise-tatto.jpg" alt="Drope Tattoo — arte autoral na pele" class="hero__img" loading="eager" fetchpriority="high" />
+    <div class="hero__overlay"></div>
+  </div>
+  <div class="hero__noise" aria-hidden="true"></div>
+  <div class="hero__line-left" aria-hidden="true"></div>
+  <div class="hero__deco-num" aria-hidden="true">777</div>
+
+  <div class="hero__content">
+    <div class="hero__eyebrow">
+      <span class="hero__dot"></span>
+      <span>Agendamentos Abertos</span>
+    </div>
+    <h1 class="hero__title">
+      <span class="hero__title-line">DROPE</span>
+      <span class="hero__title-line">Tattoo</span>
+    </h1>
+    <div class="hero__meta">
+      <div class="hero__meta-divider"></div>
+      <span class="hero__sub">Tinta. Traço. Identidade.</span>
+      <span class="hero__handle">@drope.tattoo777</span>
+    </div>
+    <div class="hero__ctas">
+      <a href="https://wa.me/5521966805080?text=Ol%C3%A1%2C%20Drope!%20Quero%20agendar%20uma%20tattoo." class="btn btn--primary" target="_blank" rel="noopener">AGENDAR TATTOO</a>
+      <a href="#portfolio" class="btn btn--ghost">VER PORTFÓLIO</a>
+    </div>
+  </div>
+
+  <div class="hero__bottom">
+    <a href="#identidade" class="hero__scroll" aria-label="Rolar para baixo">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </a>
+    <div class="hero__counter">
+      <span class="hero__counter-num">20</span>
+      <span class="hero__counter-label">trabalhos no portfólio</span>
+    </div>
+  </div>
+</section>
+
+<!-- IDENTIDADE -->
+<section class="conceito" id="identidade">
+  <div class="conceito__codex-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="conceito__grid">
+      <div class="conceito__text">
+        <span class="label reveal">A ARTE</span>
+        <h2 class="conceito__title reveal">CADA TRAÇO<br /><em>TEM HISTÓRIA.</em></h2>
+        <p class="conceito__desc reveal">Arte autoral que nasce da conversa. Antes de qualquer agulha, existe um processo — entender quem você é, o que você carrega e o que quer eternizar na pele.</p>
+        <ul class="conceito__pillars reveal">
+          <li><strong>Arte Autoral</strong><span>Projetos criados do zero</span></li>
+          <li><strong>Exclusividade</strong><span>Nenhum projeto se repete</span></li>
+          <li><strong>Processo Colaborativo</strong><span>Sua ideia no centro de tudo</span></li>
+          <li><strong>Técnica e Cuidado</strong><span>Do rascunho à cicatrização</span></li>
+        </ul>
+      </div>
+      <div class="conceito__visual reveal">
+        <img src="/images/tattoos/santa-seia-drope.jpg" alt="Detalhe de tatuagem Drope — arte autoral" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio__header">
+      <span class="label reveal">TRABALHOS</span>
+      <h2 class="section-title reveal">PORTFÓLIO</h2>
+    </div>
+    <div class="portfolio__filters reveal">
+      <button class="filter active" data-filter="all">Todos</button>
+      <button class="filter" data-filter="blackwork">Blackwork</button>
+      <button class="filter" data-filter="autoral">Autoral</button>
+      <button class="filter" data-filter="wall">Wall / Parede</button>
+    </div>
+    <div class="portfolio__grid" id="portfolioGrid"></div>
+    <div class="portfolio__more reveal">
+      <a href="https://www.instagram.com/drope.tattoo777/" target="_blank" rel="noopener" class="btn btn--ghost">VER MAIS NO INSTAGRAM</a>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="manifesto">
+  <div class="container">
+    <div class="manifesto__grid">
+      <div class="manifesto__left reveal">
+        <span class="label">O MÉTODO</span>
+        <h2 class="manifesto__title">THE<br /><em>DROPE</em><br />METHOD</h2>
+      </div>
+      <div class="manifesto__right">
+        <div class="manifesto__item reveal">
+          <span class="manifesto__num">I</span>
+          <div class="manifesto__text">
+            <strong>ARTE AUTORAL</strong>
+            <p>Cada projeto nasce do zero. Nenhum desenho é repetido.</p>
+          </div>
+        </div>
+        <div class="manifesto__item reveal">
+          <span class="manifesto__num">II</span>
+          <div class="manifesto__text">
+            <strong>PROCESSO COLABORATIVO</strong>
+            <p>Sua ideia no centro. O traço, a intenção e a técnica do Drope.</p>
+          </div>
+        </div>
+        <div class="manifesto__item reveal">
+          <span class="manifesto__num">III</span>
+          <div class="manifesto__text">
+            <strong>EXCLUSIVIDADE TOTAL</strong>
+            <p>100% dos projetos são personalizados. Zero cópias.</p>
+          </div>
+        </div>
+        <div class="manifesto__item reveal">
+          <span class="manifesto__num">IV</span>
+          <div class="manifesto__text">
+            <strong>DO RASCUNHO À PELE</strong>
+            <p>Acompanhamento completo: do briefing à cicatrização.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="sobre__grid">
+      <div class="sobre__visual reveal">
+        <!-- FOTO DO ARTISTA: para trocar, altere somente o src desta imagem. -->
+        <img src="/images/tattoos/artist-drope.jpg" alt="Drope tatuando no estúdio" loading="lazy" />
+        <div class="sobre__visual-tag">@drope.tattoo777</div>
+      </div>
+      <div class="sobre__text">
+        <span class="label reveal">SOBRE O ARTISTA</span>
+        <h2 class="section-title reveal">DROPE</h2>
+        <div class="sobre__tags reveal">
+          <span>@drope.tattoo777</span>
+          <span>BLACKWORK</span>
+          <span>AUTORAL</span>
+        </div>
+        <p class="reveal">Acompanhe o trabalho no Instagram <strong>@drope.tattoo777</strong> e entre em contato para conversar sobre seu projeto.</p>
+        <div class="sobre__actions reveal">
+          <a href="https://wa.me/5521966805080?text=Ol%C3%A1%2C%20Drope!%20Quero%20saber%20mais%20sobre%20seu%20trabalho." class="btn btn--primary" target="_blank" rel="noopener">FALAR COM O DROPE</a>
+          <a href="https://www.instagram.com/drope.tattoo777/" class="btn btn--ghost" target="_blank" rel="noopener">INSTAGRAM</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="processo" id="processo">
+  <div class="container">
+    <span class="label reveal">PASSO A PASSO</span>
+    <h2 class="section-title reveal">COMO<br /><em>AGENDAR</em></h2>
+    <div class="processo__steps">
+      <div class="processo__step reveal">
+        <div class="processo__step-num">01</div>
+        <div class="processo__step-content">
+          <h3>IDEIA</h3>
+          <p>Você envia sua ideia, referências, estilo e onde quer tatuar.</p>
+        </div>
+      </div>
+      <div class="processo__step reveal">
+        <div class="processo__step-num">02</div>
+        <div class="processo__step-content">
+          <h3>CONVERSA</h3>
+          <p>Conversamos sobre tamanho, local, estilo e possibilidades do projeto.</p>
+        </div>
+      </div>
+      <div class="processo__step reveal">
+        <div class="processo__step-num">03</div>
+        <div class="processo__step-content">
+          <h3>DESENHO</h3>
+          <p>O projeto é preparado exclusivamente para você. Nenhum desenho se repete.</p>
+        </div>
+      </div>
+      <div class="processo__step reveal">
+        <div class="processo__step-num">04</div>
+        <div class="processo__step-content">
+          <h3>SESSÃO</h3>
+          <p>Agendamos e realizamos a tattoo. Você sai com arte na pele.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="instagram" id="instagram">
+  <div class="instagram__bg" aria-hidden="true"></div>
+  <div class="container">
+    <span class="label reveal">SIGA O TRABALHO</span>
+    <h2 class="section-title reveal">FOLLOW<br /><em>THE ART</em></h2>
+    <div class="instagram__grid reveal" id="instagramGrid"></div>
+    <div class="instagram__cta reveal">
+      <div class="instagram__profile">
+        <div class="instagram__profile-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <p class="instagram__profile-name">Drope Tattoo</p>
+          <p class="instagram__handle">@drope.tattoo777</p>
+        </div>
+      </div>
+      <a href="https://www.instagram.com/drope.tattoo777/" target="_blank" rel="noopener" class="btn btn--primary">ABRIR INSTAGRAM</a>
+    </div>
+  </div>
+</section>
+
+<!-- SPOTIFY -->
+<section class="spotify" id="spotify">
+  <div class="container">
+    <div class="spotify__grid">
+      <div class="spotify__text">
+        <span class="label reveal">NA SESSÃO</span>
+        <h2 class="section-title reveal">DROPE<br /><em>SOUND</em></h2>
+        <p class="reveal">A playlist do estúdio está sendo preparada. Quando ela estiver no ar, você encontra tudo aqui.</p>
+      </div>
+      <div class="spotify__player reveal">
+        <!-- Para ativar: defina audioSrc no início de script.js com o arquivo/URL de áudio. -->
+        <audio id="dropeSoundAudio" preload="none"></audio>
+        <div class="sound-console" aria-label="Drope Sound">
+          <div class="sound-console__top">
+            <span class="sound-console__status" id="soundStatus">SOUND OFF</span>
+            <span class="sound-console__time" id="soundTime">00:00</span>
+          </div>
+          <button class="sound-console__play" id="soundPlay" type="button" disabled>▶ PLAY</button>
+          <label class="sound-console__volume" for="soundVolume">VOLUME
+            <input id="soundVolume" type="range" min="0" max="100" value="70" disabled />
+          </label>
+          <p class="sound-console__note" id="soundNote">PLAYER PREPARADO · ÁUDIO EM BREVE</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="localizacao" id="localizacao">
+  <div class="localizacao__bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="localizacao__grid">
+      <div class="localizacao__info">
+        <span class="label reveal">ONDE TATUO</span>
+        <h2 class="section-title reveal">LOCALIZAÇÃO</h2>
+        <ul class="localizacao__details reveal">
+          <li><strong>ARTISTA</strong><span>Drope Tattoo</span></li>
+          <li><strong>ENDEREÇO</strong><span>ENDEREÇO — EDITAR</span></li>
+          <li><strong>CIDADE / ESTADO</strong><span>CIDADE / ESTADO — EDITAR</span></li>
+          <li><strong>HORÁRIO</strong><span>HORÁRIO DE ATENDIMENTO — EDITAR</span></li>
+        </ul>
+        <a href="https://maps.google.com/?q=Drope+Tattoo" target="_blank" rel="noopener" class="btn btn--ghost reveal">ABRIR NO MAPS</a>
+      </div>
+      <div class="localizacao__map reveal">
+        <div class="map-placeholder">
+          <span>MAPA</span>
+          <p>O endereço e o mapa serão adicionados assim que o estúdio estiver definido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORÇAMENTO -->
+<section class="orcamento" id="orcamento">
+  <div class="container">
+    <div class="orcamento__grid">
+      <div class="orcamento__text">
+        <span class="label reveal">ORÇAMENTO</span>
+        <h2 class="section-title reveal">TELL ME<br /><em>YOUR IDEA</em></h2>
+        <p class="reveal">Preencha o briefing com os detalhes da sua ideia. Ao enviar, você será redirecionado para o WhatsApp com a mensagem já montada.</p>
+        <p class="reveal orcamento__note">Atendimento personalizado · Orçamento sem compromisso</p>
+      </div>
+      <form class="orcamento__form reveal" id="orcamentoForm" novalidate>
+        <div class="orcamento__form-head">
+          <span>01</span>
+          <p>Conte a sua ideia. Os campos com <b>*</b> são essenciais para começar.</p>
+        </div>
+        <div class="form-group">
+          <label for="f-nome">Seu nome</label>
+          <input type="text" id="f-nome" name="nome" placeholder="Como você se chama?" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-whatsapp">WhatsApp</label>
+            <input type="tel" id="f-whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="f-instagram">Instagram</label>
+            <input type="text" id="f-instagram" name="instagram" placeholder="@seuinstagram" />
+          </div>
+        </div>
+        <div class="form-group form-group--idea">
+          <label for="f-ideia">Escreva sua ideia</label>
+          <textarea id="f-ideia" name="ideia" rows="4" placeholder="Descreva sua ideia, inspirações, o que você quer eternizar..." required></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-local">Local do corpo</label>
+            <input type="text" id="f-local" name="local" placeholder="Ex: antebraço, costela..." required />
+          </div>
+          <div class="form-group">
+            <label for="f-tamanho">Tamanho aproximado</label>
+            <input type="text" id="f-tamanho" name="tamanho" placeholder="Ex: 10cm, palma da mão..." />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-estilo">Estilo</label>
+            <select id="f-estilo" name="estilo">
+              <option value="">Estilo (opcional)</option>
+              <option value="Blackwork">Blackwork</option>
+              <option value="Realismo">Realismo</option>
+              <option value="Fine Line">Fine Line</option>
+              <option value="Tradicional">Tradicional</option>
+              <option value="Autoral">Autoral / Sem preferência</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-referencia">Referência (link)</label>
+            <input type="url" id="f-referencia" name="referencia" placeholder="Pinterest, Instagram..." />
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">COMEÇAR MEU PROJETO</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contato">
+  <div class="cta-final__bg">
+      <img src="/images/tattoos/carmine.jpg" alt="Drope Tattoo" loading="lazy" />
+    <div class="cta-final__overlay"></div>
+  </div>
+  <div class="container cta-final__content">
+    <h2 class="cta-final__title reveal">MAIS TRABALHOS<br /><em>NO INSTAGRAM</em></h2>
+    <p class="cta-final__handle reveal">@drope.tattoo777</p>
+    <p class="cta-final__desc reveal">Acompanhe os projetos, processos e novidades direto no Instagram.</p>
+    <a href="https://www.instagram.com/drope.tattoo777/" class="btn btn--primary btn--large reveal" target="_blank" rel="noopener">SEGUIR @drope.tattoo777</a>
+    <p class="cta-final__note reveal">Novos trabalhos toda semana</p>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__logo">DROPE<em>TATTOO</em></p>
+        <p class="footer__tagline">Arte autoral na pele.</p>
+        <p class="footer__handle">@drope.tattoo777</p>
+      </div>
+      <div class="footer__links">
+        <p class="footer__heading">NAVEGAÇÃO</p>
+        <ul>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#processo">Como Agendar</a></li>
+          <li><a href="#orcamento">Orçamento</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <p class="footer__heading">CONTATO</p>
+        <ul>
+          <li><a href="https://www.instagram.com/drope.tattoo777/" target="_blank" rel="noopener">Instagram: @drope.tattoo777</a></li>
+          <li><a href="https://wa.me/5521966805080" target="_blank" rel="noopener">WhatsApp: (21) 96680-5080</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Drope Tattoo. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5521966805080?text=Ol%C3%A1%2C%20Drope!%20Quero%20fazer%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">✕</button>
+  <button class="lightbox__prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+  <button class="lightbox__next" id="lightboxNext" aria-label="Próximo">&#8250;</button>
+  <div class="lightbox__img-wrap">
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+  <div class="lightbox__counter" id="lightboxCounter"></div>
+</div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
