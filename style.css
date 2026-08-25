@@ -1130,7 +1130,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0 20px; }
+  .container { padding: 0 20px; min-width: 0; }
   .nav { padding: 0 20px; }
   .nav__toggle { display: flex; }
   .nav__links {
@@ -1144,26 +1144,37 @@ ul { list-style: none; }
     gap: 0;
     padding: 28px 0;
     transform: translateY(-110%);
-    transition: transform var(--transition);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform var(--transition), visibility 0s linear 0.4s;
     border-bottom: 1px solid var(--gray-light);
     z-index: 99;
   }
-  .nav__links.open { transform: translateY(0); }
+  .nav__links.open {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform var(--transition), visibility 0s linear 0s;
+  }
   .nav__links li { width: 100%; text-align: center; }
   .nav__links a { display: block; padding: 14px 24px; font-size: 0.78rem; }
   .nav__cta { margin: 8px 24px 0; }
 
-  .hero__content { padding: 0 20px 48px; }
+  .hero { min-height: 620px; }
+  .hero__content { min-width: 0; padding: 0 20px 48px; }
   .hero__bottom { padding: 16px 20px 20px; }
   .hero__line-left { display: none; }
   .hero__deco-num { display: none; }
   .hero__counter { display: none; }
-  .hero__title { font-size: clamp(4.5rem, 20vw, 7rem); }
+  .hero__title { max-width: 100%; font-size: clamp(4.5rem, 20vw, 7rem); }
   .hero__ctas { flex-direction: column; }
-  .hero__ctas .btn { text-align: center; }
+  .hero__ctas .btn { width: 100%; text-align: center; }
+  .hero__meta { align-items: flex-start; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 28px; }
+  .hero__sub, .hero__handle { max-width: 100%; overflow-wrap: anywhere; }
 
   .conceito__grid,
   .sobre__grid,
+  .manifesto__grid,
   .localizacao__grid,
   .orcamento__grid { grid-template-columns: 1fr; gap: 40px; }
   .conceito__visual { height: 340px; }
@@ -1173,6 +1184,8 @@ ul { list-style: none; }
   .conceito__bg-img { display: none; }
   .conceito__codex-bg { background-attachment: scroll; opacity: 0.14; }
 
+  .portfolio__filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; scrollbar-width: thin; }
+  .filter { flex: 0 0 auto; min-height: 42px; }
   .portfolio__grid { columns: 2; column-gap: 4px; }
   .portfolio__item { margin-bottom: 4px; }
   .instagram__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1180,6 +1193,8 @@ ul { list-style: none; }
   .instagram__bg { opacity: 0.16; }
 
   .footer__grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer__contact a { overflow-wrap: anywhere; }
+  .manifesto__item { min-width: 0; }
   .cta-final { padding: 100px 0; }
   .btn--large { padding: 17px 30px; font-size: 0.76rem; }
   .form-row { grid-template-columns: 1fr; }
@@ -1191,6 +1206,17 @@ ul { list-style: none; }
   .numeros__grid { grid-template-columns: 1fr 1fr; }
 
   .whatsapp-float { bottom: 20px; right: 16px; width: 48px; height: 48px; }
+
+  .btn { max-width: 100%; white-space: normal; text-align: center; }
+  .orcamento__form,
+  .form-group,
+  .form-group input,
+  .form-group textarea,
+  .form-group select { min-width: 0; max-width: 100%; }
+  .lightbox__img-wrap,
+  .lightbox__img-wrap img { max-width: calc(100vw - 32px); }
+  .lightbox__prev { left: 8px; }
+  .lightbox__next { right: 8px; }
 }
 
 @media (max-width: 480px) {
