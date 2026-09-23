@@ -7,15 +7,39 @@
   <meta name="description" content="Drope Tattoo — arte autoral na pele. Blackwork, autoral e muito mais. Projetos exclusivos e personalizados. Agende pelo WhatsApp." />
   <meta name="keywords" content="drope tattoo, tatuagem autoral, blackwork, tatuagem personalizada, drope.tattoo777" />
   <meta name="author" content="Drope Tattoo" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta property="og:title" content="Drope Tattoo | Arte Autoral na Pele" />
   <meta property="og:description" content="Projetos exclusivos. Cada traço tem intenção. @drope.tattoo777" />
-  <meta property="og:image" content="/images/tattoos/theise-tatto.jpg" />
+  <meta property="og:image" content="https://dropetattoo.com.br/images/tattoos/theise-tatto.jpg" />
   <meta property="og:url" content="https://dropetattoo.com.br" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TattooParlor",
+    "name": "Drope Tattoo",
+    "image": "https://dropetattoo.com.br/images/tattoos/theise-tatto.jpg",
+    "url": "https://dropetattoo.com.br/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Manoel José Lebrão, 339",
+      "addressLocality": "Teresópolis",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    "sameAs": ["https://www.instagram.com/drope.tattoo777/"]
+  }
+  </script>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -31,6 +55,8 @@
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#processo">Como Agendar</a></li>
     <li><a href="#localizacao">Localização</a></li>
+    <li><a href="#cuidados">Cuidados</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#orcamento" class="nav__cta">Orçamento</a></li>
   </ul>
 </nav>
@@ -38,7 +64,7 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero__bg">
-    <img src="/images/tattoos/theise-tatto.jpg" alt="Drope Tattoo — arte autoral na pele" class="hero__img" loading="eager" fetchpriority="high" />
+    <img src="/images/tattoos/theise-tatto.jpg" alt="Drope Tattoo — arte autoral na pele" class="hero__img" loading="eager" fetchpriority="high" width="1920" height="1919" />
     <div class="hero__overlay"></div>
   </div>
   <div class="hero__noise" aria-hidden="true"></div>
@@ -71,7 +97,7 @@
       <span>Scroll</span>
     </a>
     <div class="hero__counter">
-      <span class="hero__counter-num">20</span>
+      <span class="hero__counter-num">37</span>
       <span class="hero__counter-label">trabalhos no portfólio</span>
     </div>
   </div>
@@ -94,7 +120,7 @@
         </ul>
       </div>
       <div class="conceito__visual reveal">
-        <img src="/images/tattoos/santa-seia-drope.jpg" alt="Detalhe de tatuagem Drope — arte autoral" loading="lazy" />
+        <img src="/images/tattoos/santa-seia-drope.jpg" alt="Detalhe de tatuagem Drope — arte autoral" loading="lazy" width="1440" height="1440" />
       </div>
     </div>
   </div>
@@ -106,15 +132,22 @@
     <div class="portfolio__header">
       <span class="label reveal">TRABALHOS</span>
       <h2 class="section-title reveal">PORTFÓLIO</h2>
+      <p class="reveal portfolio__header-desc">Filtre por categoria para navegar pelos trabalhos.</p>
     </div>
     <div class="portfolio__filters reveal">
       <button class="filter active" data-filter="all">Todos</button>
       <button class="filter" data-filter="blackwork">Blackwork</button>
-      <button class="filter" data-filter="autoral">Autoral</button>
+      <button class="filter" data-filter="lettering">Lettering</button>
+      <button class="filter" data-filter="flash">Flashs</button>
+      <button class="filter" data-filter="art-fusion">Art Fusion</button>
+      <button class="filter" data-filter="preto-e-cinza">Preto e Cinza</button>
+      <button class="filter" data-filter="suminagashi">Suminagashi</button>
       <button class="filter" data-filter="wall">Wall / Parede</button>
+      <button class="filter" data-filter="quadros">Quadros / Telas</button>
     </div>
     <div class="portfolio__grid" id="portfolioGrid"></div>
     <div class="portfolio__more reveal">
+      <a href="#orcamento" class="btn btn--primary">PEDIR ORÇAMENTO</a>
       <a href="https://www.instagram.com/drope.tattoo777/" target="_blank" rel="noopener" class="btn btn--ghost">VER MAIS NO INSTAGRAM</a>
     </div>
   </div>
@@ -168,7 +201,7 @@
     <div class="sobre__grid">
       <div class="sobre__visual reveal">
         <!-- FOTO DO ARTISTA: para trocar, altere somente o src desta imagem. -->
-        <img src="/images/tattoos/artist-drope.jpg" alt="Drope tatuando no estúdio" loading="lazy" />
+        <img src="/images/tattoos/artist-drope.jpg" alt="Drope tatuando no estúdio" loading="lazy" width="1440" height="1440" />
         <div class="sobre__visual-tag">@drope.tattoo777</div>
       </div>
       <div class="sobre__text">
@@ -177,8 +210,10 @@
         <div class="sobre__tags reveal">
           <span>@drope.tattoo777</span>
           <span>BLACKWORK</span>
+          <span>LETTERING</span>
           <span>AUTORAL</span>
         </div>
+        <p class="reveal">Drope é o tatuador por trás do @drope.tattoo777 — um trabalho construído sobre um princípio simples: nenhum projeto se repete. Cada tattoo nasce de uma conversa, é desenhada sob medida e executada com foco em blackwork e lettering — do rascunho à cicatrização, com atendimento presencial em Teresópolis/RJ.</p>
         <p class="reveal">Acompanhe o trabalho no Instagram <strong>@drope.tattoo777</strong> e entre em contato para conversar sobre seu projeto.</p>
         <div class="sobre__actions reveal">
           <a href="https://wa.me/5521966805080?text=Ol%C3%A1%2C%20Drope!%20Quero%20saber%20mais%20sobre%20seu%20trabalho." class="btn btn--primary" target="_blank" rel="noopener">FALAR COM O DROPE</a>
@@ -253,34 +288,6 @@
   </div>
 </section>
 
-<!-- SPOTIFY -->
-<section class="spotify" id="spotify">
-  <div class="container">
-    <div class="spotify__grid">
-      <div class="spotify__text">
-        <span class="label reveal">NA SESSÃO</span>
-        <h2 class="section-title reveal">DROPE<br /><em>SOUND</em></h2>
-        <p class="reveal">A playlist do estúdio está sendo preparada. Quando ela estiver no ar, você encontra tudo aqui.</p>
-      </div>
-      <div class="spotify__player reveal">
-        <!-- Para ativar: defina audioSrc no início de script.js com o arquivo/URL de áudio. -->
-        <audio id="dropeSoundAudio" preload="none"></audio>
-        <div class="sound-console" aria-label="Drope Sound">
-          <div class="sound-console__top">
-            <span class="sound-console__status" id="soundStatus">SOUND OFF</span>
-            <span class="sound-console__time" id="soundTime">00:00</span>
-          </div>
-          <button class="sound-console__play" id="soundPlay" type="button" disabled>▶ PLAY</button>
-          <label class="sound-console__volume" for="soundVolume">VOLUME
-            <input id="soundVolume" type="range" min="0" max="100" value="70" disabled />
-          </label>
-          <p class="sound-console__note" id="soundNote">PLAYER PREPARADO · ÁUDIO EM BREVE</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- LOCALIZAÇÃO -->
 <section class="localizacao" id="localizacao">
   <div class="localizacao__bg" aria-hidden="true"></div>
@@ -291,18 +298,81 @@
         <h2 class="section-title reveal">LOCALIZAÇÃO</h2>
         <ul class="localizacao__details reveal">
           <li><strong>ARTISTA</strong><span>Drope Tattoo</span></li>
-          <li><strong>ENDEREÇO</strong><span>ENDEREÇO — EDITAR</span></li>
-          <li><strong>CIDADE / ESTADO</strong><span>CIDADE / ESTADO — EDITAR</span></li>
-          <li><strong>HORÁRIO</strong><span>HORÁRIO DE ATENDIMENTO — EDITAR</span></li>
+          <li><strong>ENDEREÇO</strong><span>Rua Manoel José Lebrão, 339</span></li>
+          <li><strong>CIDADE / ESTADO</strong><span>Teresópolis / RJ</span></li>
+          <li><strong>HORÁRIO</strong><span>Seg a Sex, 10h às 19h</span></li>
         </ul>
-        <a href="https://maps.google.com/?q=Drope+Tattoo" target="_blank" rel="noopener" class="btn btn--ghost reveal">ABRIR NO MAPS</a>
+        <a href="https://maps.google.com/?q=Rua+Manoel+José+Lebrão,+339+-+Teresópolis,+RJ" target="_blank" rel="noopener" class="btn btn--ghost reveal">ABRIR NO MAPS</a>
       </div>
       <div class="localizacao__map reveal">
-        <div class="map-placeholder">
-          <span>MAPA</span>
-          <p>O endereço e o mapa serão adicionados assim que o estúdio estiver definido.</p>
-        </div>
+        <iframe
+          src="https://www.google.com/maps?q=Rua+Manoel+José+Lebrão,+339+-+Teresópolis,+RJ&output=embed"
+          width="100%" height="100%" style="border:0" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa — Rua Manoel José Lebrão, 339, Teresópolis/RJ"></iframe>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUIDADOS PÓS-TATTOO -->
+<section class="cuidados" id="cuidados">
+  <div class="container">
+    <span class="label reveal">DEPOIS DA SESSÃO</span>
+    <h2 class="section-title reveal">CUIDADOS<br /><em>PÓS-TATTOO</em></h2>
+    <p class="reveal cuidados__intro">O atendimento não termina quando a tattoo fica pronta. O resumo abaixo é um guia geral — siga sempre a orientação específica passada pelo Drope após a sua sessão.</p>
+    <ul class="cuidados__list reveal">
+      <li><strong>Higiene</strong><span>Mantenha a região sempre limpa.</span></li>
+      <li><strong>Orientação</strong><span>Siga as instruções específicas passadas pelo Drope após a sessão.</span></li>
+      <li><strong>Sol</strong><span>Evite exposição solar direta durante a cicatrização.</span></li>
+      <li><strong>Água</strong><span>Evite piscina, mar e banhos prolongados no período.</span></li>
+      <li><strong>Casquinhas</strong><span>Nunca arranque — deixe que caiam naturalmente.</span></li>
+      <li><strong>Coceira</strong><span>Evite coçar a região, mesmo com incômodo.</span></li>
+      <li><strong>Atrito</strong><span>Prefira roupas soltas sobre o local tatuado.</span></li>
+      <li><strong>Produtos</strong><span>Use somente o que for indicado pelo Drope.</span></li>
+    </ul>
+    <p class="reveal cuidados__note">Em caso de dúvidas durante a cicatrização, entre em contato para receber orientação sobre sua tattoo.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <span class="label reveal">DÚVIDAS</span>
+    <h2 class="section-title reveal">PERGUNTAS<br /><em>FREQUENTES</em></h2>
+    <div class="faq__list">
+      <details class="faq__item reveal">
+        <summary>Quanto custa uma tatuagem?</summary>
+        <p>O valor depende do projeto: tamanho, local do corpo, estilo, complexidade e tempo estimado de trabalho. Preencha o formulário de orçamento para receber uma avaliação personalizada.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Posso levar uma referência?</summary>
+        <p>Sim. Referências ajudam a entender sua ideia — o projeto final é desenvolvido de forma autoral, adaptado ao traço e à técnica do Drope.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Vocês fazem cobertura de tatuagem antiga?</summary>
+        <p>Cobertura depende de avaliação individual. Entre em contato pelo WhatsApp e envie fotos para saber se é possível no seu caso.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Como funciona o desenho?</summary>
+        <p>Depois da conversa inicial sobre ideia, tamanho e estilo, o projeto é preparado exclusivamente para você — nenhum desenho é reaproveitado ou repetido.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Quanto tempo demora para cicatrizar?</summary>
+        <p>O tempo varia de pessoa para pessoa e conforme a região tatuada. Siga a orientação passada pelo Drope após a sessão para uma cicatrização saudável.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Posso remarcar minha sessão?</summary>
+        <p>Consulte a disponibilidade diretamente pelo WhatsApp para reagendar.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Menor de idade pode tatuar?</summary>
+        <p>Essa condição deve ser confirmada diretamente com o estúdio antes do agendamento.</p>
+      </details>
+      <details class="faq__item reveal">
+        <summary>Quais as formas de pagamento?</summary>
+        <p>Consulte as condições diretamente no atendimento.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -314,13 +384,15 @@
       <div class="orcamento__text">
         <span class="label reveal">ORÇAMENTO</span>
         <h2 class="section-title reveal">TELL ME<br /><em>YOUR IDEA</em></h2>
+        <p class="reveal">Cada tattoo é avaliada individualmente. O valor considera fatores como tamanho, região do corpo, estilo, nível de detalhe e tempo estimado de trabalho — por isso não existe uma tabela fixa.</p>
         <p class="reveal">Preencha o briefing com os detalhes da sua ideia. Ao enviar, você será redirecionado para o WhatsApp com a mensagem já montada.</p>
         <p class="reveal orcamento__note">Atendimento personalizado · Orçamento sem compromisso</p>
+        <a href="https://wa.me/5521966805080?text=Ol%C3%A1%2C%20Drope!%20Quero%20fazer%20um%20or%C3%A7amento." class="btn btn--ghost reveal orcamento__whatsapp-cta" target="_blank" rel="noopener">FALAR NO WHATSAPP</a>
       </div>
       <form class="orcamento__form reveal" id="orcamentoForm" novalidate>
         <div class="orcamento__form-head">
           <span>01</span>
-          <p>Conte a sua ideia. Os campos com <b>*</b> são essenciais para começar.</p>
+          <p>Conte a sua ideia. Os campos com <b>*</b> são essenciais para começar — quanto mais detalhes você der, melhor será a avaliação.</p>
         </div>
         <div class="form-group">
           <label for="f-nome">Seu nome</label>
@@ -377,7 +449,7 @@
 <!-- CTA FINAL -->
 <section class="cta-final" id="contato">
   <div class="cta-final__bg">
-      <img src="/images/tattoos/carmine.jpg" alt="Drope Tattoo" loading="lazy" />
+      <img src="/images/tattoos/carmine.jpg" alt="Drope Tattoo" loading="lazy" width="1440" height="1440" />
     <div class="cta-final__overlay"></div>
   </div>
   <div class="container cta-final__content">
@@ -406,6 +478,8 @@
           <li><a href="#processo">Como Agendar</a></li>
           <li><a href="#orcamento">Orçamento</a></li>
           <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#cuidados">Cuidados</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="footer__contact">

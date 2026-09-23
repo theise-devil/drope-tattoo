@@ -6,9 +6,6 @@ const CONFIG = {
   instagram: 'https://www.instagram.com/drope.tattoo777/',
   instagramHandle: '@drope.tattoo777',
   manifestUrl: 'images/manifest.json',
-  // DROPE SOUND: informe aqui um arquivo de áudio ou URL quando estiver disponível.
-  // Ex.: 'public/audio/drope-sound.mp3'. O site nunca inicia o áudio sozinho.
-  audioSrc: '',
 };
 
 /* ============================================================
@@ -22,46 +19,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 ============================================================ */
 const yearEl = $('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-/* ============================================================
-   DROPE SOUND — player nativo, sem autoplay e sem áudio artificial
-============================================================ */
-function initDropeSound() {
-  const audio = $('#dropeSoundAudio');
-  const play = $('#soundPlay');
-  const volume = $('#soundVolume');
-  const status = $('#soundStatus');
-  const time = $('#soundTime');
-  const note = $('#soundNote');
-  if (!audio || !play || !volume) return;
-
-  if (!CONFIG.audioSrc) return;
-
-  audio.src = CONFIG.audioSrc;
-  audio.volume = Number(volume.value) / 100;
-  play.disabled = false;
-  volume.disabled = false;
-  if (note) note.textContent = 'PRONTO PARA TOCAR';
-
-  play.addEventListener('click', async () => {
-    if (audio.paused) await audio.play();
-    else audio.pause();
-  });
-  volume.addEventListener('input', () => { audio.volume = Number(volume.value) / 100; });
-  audio.addEventListener('play', () => {
-    play.textContent = '⏸ PAUSE';
-    if (status) status.textContent = 'SOUND ON';
-  });
-  audio.addEventListener('pause', () => {
-    play.textContent = '▶ PLAY';
-    if (status) status.textContent = 'SOUND OFF';
-  });
-  audio.addEventListener('timeupdate', () => {
-    if (!time) return;
-    const seconds = Math.floor(audio.currentTime || 0);
-    time.textContent = `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
-  });
-}
 
 /* ============================================================
    NAVEGAÇÃO — STICKY + MOBILE
@@ -288,8 +245,9 @@ async function loadImagesFromManifest() {
         div.className = 'portfolio__item';
         div.dataset.category = item.category;
         div.dataset.type = item.type;
+        const dims = item.width && item.height ? ` width="${item.width}" height="${item.height}"` : '';
         div.innerHTML = `
-          <img src="${item.image}" alt="${item.title} — Drope Tattoo" loading="lazy" decoding="async" />
+          <img src="${item.image}" alt="${item.title} — Drope Tattoo" loading="lazy" decoding="async"${dims} />
           <div class="portfolio__item-overlay"><span>${item.title}</span></div>
         `;
         grid.appendChild(div);
@@ -300,10 +258,12 @@ async function loadImagesFromManifest() {
     const igGrid = $('#instagramGrid');
     if (igGrid && manifest.instagram && manifest.instagram.length > 0) {
       igGrid.innerHTML = '';
-      manifest.instagram.forEach(src => {
+      manifest.instagram.forEach(entry => {
+        const src = typeof entry === 'string' ? entry : entry.image;
+        const dims = entry.width && entry.height ? ` width="${entry.width}" height="${entry.height}"` : '';
         const div = document.createElement('div');
         div.className = 'instagram__item';
-        div.innerHTML = `<img src="${src}" alt="Drope Tattoo — Instagram" loading="lazy" />`;
+        div.innerHTML = `<img src="${src}" alt="Drope Tattoo — Instagram" loading="lazy"${dims} />`;
         igGrid.appendChild(div);
       });
     }
@@ -373,5 +333,4 @@ $$('a[href^="#"]').forEach(anchor => {
    INICIALIZAÇÃO
 ============================================================ */
 initHero();
-initDropeSound();
 loadImagesFromManifest();

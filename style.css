@@ -346,8 +346,8 @@ ul { list-style: none; }
 }
 .hero__meta.visible { opacity: 1; transform: translateY(0); }
 .hero__meta-divider { width: 40px; height: 1px; background: var(--gray); flex-shrink: 0; }
-.hero__sub { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--off-white); text-transform: uppercase; }
-.hero__handle { font-size: 0.7rem; letter-spacing: 0.16em; color: var(--gray); text-transform: uppercase; }
+.hero__sub { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--off-white); text-transform: uppercase; text-shadow: 0 1px 4px rgba(0,0,0,0.7); }
+.hero__handle { font-size: 0.7rem; letter-spacing: 0.16em; color: var(--off-white); text-transform: uppercase; text-shadow: 0 1px 4px rgba(0,0,0,0.7); }
 .hero__ctas {
   display: flex;
   gap: 14px;
@@ -506,13 +506,18 @@ ul { list-style: none; }
   isolation: isolate;
 }
 .portfolio .container { position: relative; z-index: 1; }
+.portfolio__header-desc { font-size: 0.85rem; color: var(--off-white); line-height: 1.7; margin-bottom: 32px; max-width: 480px; }
 .portfolio__filters {
   display: flex;
   gap: 6px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
   margin-bottom: 40px;
 }
 .filter {
+  flex: 0 0 auto;
   background: none;
   border: 1px solid var(--gray-light);
   color: var(--gray);
@@ -569,7 +574,7 @@ ul { list-style: none; }
 .portfolio__item--out { animation: portfolioOut 0.16s ease both; pointer-events: none; }
 @keyframes portfolioIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes portfolioOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.985); } }
-.portfolio__more { text-align: center; margin-top: 52px; }
+.portfolio__more { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 52px; }
 
 /* ============================================================
    MANIFESTO — THE DROPE METHOD
@@ -809,54 +814,6 @@ ul { list-style: none; }
 .instagram__handle { font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gray); text-transform: uppercase; }
 
 /* ============================================================
-   SPOTIFY
-============================================================ */
-.spotify {
-  padding: 130px 0;
-  background: var(--bg-3);
-  border-top: 1px solid var(--gray-light);
-  border-bottom: 1px solid var(--gray-light);
-}
-.spotify__grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: center;
-}
-.spotify__text .section-title { margin-bottom: 20px; }
-.spotify__text p { font-size: 0.9rem; color: var(--off-white); line-height: 1.85; margin-bottom: 32px; }
-.spotify__player { width: 100%; }
-.spotify__player iframe { width: 100%; border: none; }
-.spotify__embed { width: 100%; }
-.spotify__placeholder {
-  background: var(--bg-4);
-  border: 1px solid var(--gray-light);
-  padding: 48px 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-}
-.spotify__placeholder-icon { color: #1db954; }
-.spotify__placeholder-text {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  letter-spacing: 0.15em;
-  color: var(--off-white);
-}
-.spotify__placeholder-sub { font-size: 0.75rem; color: var(--gray); letter-spacing: 0.08em; }
-.spotify__placeholder-hint {
-  font-size: 0.65rem;
-  color: var(--gray);
-  letter-spacing: 0.05em;
-  border: 1px solid var(--gray-light);
-  padding: 6px 14px;
-  margin-top: 4px;
-  font-family: monospace;
-}
-
-/* ============================================================
    LOCALIZAÇÃO
 ============================================================ */
 .localizacao { padding: 130px 0; background: var(--bg-2); }
@@ -898,18 +855,56 @@ ul { list-style: none; }
 .localizacao__details span { font-size: 0.88rem; color: var(--off-white); line-height: 1.6; }
 .localizacao__map { height: 420px; overflow: hidden; border: 1px solid rgba(255,255,255,0.16); background: rgba(5,5,5,0.52); backdrop-filter: blur(4px); }
 .localizacao__map iframe { width: 100%; height: 100%; border: none; filter: grayscale(1) invert(0.88) contrast(0.9); }
-.map-placeholder {
-  width: 100%; height: 100%;
-  background: var(--bg-3);
-  border: 1px solid var(--gray-light);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+
+/* ============================================================
+   CUIDADOS PÓS-TATTOO
+============================================================ */
+.cuidados { padding: 130px 0; background: var(--bg); }
+.cuidados__intro { color: var(--off-white); font-size: 0.9rem; line-height: 1.85; margin-bottom: 40px; max-width: 640px; }
+.cuidados__list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 40px; }
+.cuidados__list li { border-top: 1px solid var(--gray-light); padding-top: 14px; }
+.cuidados__list strong {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
 }
-.map-placeholder span { font-family: var(--font-display); font-size: 1.8rem; color: var(--gray-light); letter-spacing: 0.2em; }
-.map-placeholder p { font-size: 0.75rem; color: var(--gray); text-align: center; max-width: 220px; line-height: 1.6; }
+.cuidados__list span { font-size: 0.8rem; color: var(--gray); line-height: 1.6; }
+.cuidados__note { margin-top: 32px; font-size: 0.85rem; color: var(--off-white); max-width: 640px; }
+
+/* ============================================================
+   FAQ
+============================================================ */
+.faq { padding: 130px 0; background: var(--bg-2); }
+.faq__list { margin-top: 42px; border-top: 1px solid var(--gray-light); }
+.faq__item { border-bottom: 1px solid var(--gray-light); }
+.faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--white);
+  list-style: none;
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+  content: '+';
+  font-family: var(--font-editorial);
+  font-size: 1.5rem;
+  color: var(--red-bright);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform var(--transition);
+}
+.faq__item[open] summary::after { transform: rotate(45deg); }
+.faq__item p { padding: 0 0 26px; font-size: 0.85rem; color: var(--gray); line-height: 1.75; max-width: 640px; }
 
 /* ============================================================
    ORÇAMENTO
@@ -924,6 +919,7 @@ ul { list-style: none; }
 .orcamento__text .section-title { margin-bottom: 20px; }
 .orcamento__text p { font-size: 0.88rem; color: var(--off-white); line-height: 1.85; margin-bottom: 14px; }
 .orcamento__note { font-size: 0.65rem !important; letter-spacing: 0.15em; color: var(--gray) !important; text-transform: uppercase; }
+.orcamento__whatsapp-cta { margin-top: 20px; }
 .orcamento__form { display: flex; flex-direction: column; gap: 16px; background: var(--bg-3); border: 1px solid var(--gray-light); padding: 32px; }
 .orcamento__form-head { display: flex; gap: 16px; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--gray-light); }
 .orcamento__form-head span { font-family: var(--font-editorial); font-size: 2.2rem; font-style: italic; color: var(--red-bright); line-height: 1; }
@@ -1123,10 +1119,18 @@ ul { list-style: none; }
 @media (max-width: 1024px) {
   .portfolio__grid { columns: 2; }
   .processo__steps { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .spotify__grid { grid-template-columns: 1fr; gap: 48px; }
   .numeros__grid { grid-template-columns: repeat(2, 1fr); }
   .numeros__item:nth-child(2) { border-right: none; }
   .numeros__item { border-bottom: 1px solid var(--gray-light); }
+}
+
+/* Menu com mais itens (FAQ/Cuidados) precisa de um pouco menos de espaço
+   logo acima do breakpoint mobile, para não estourar a largura da tela. */
+@media (max-width: 900px) and (min-width: 769px) {
+  .nav { padding: 0 24px; }
+  .nav__links { gap: 10px; }
+  .nav__links a { font-size: 0.6rem; white-space: nowrap; }
+  .nav__cta { padding: 7px 10px; }
 }
 
 @media (max-width: 768px) {
@@ -1170,7 +1174,7 @@ ul { list-style: none; }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; text-align: center; }
   .hero__meta { align-items: flex-start; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 28px; }
-  .hero__sub, .hero__handle { max-width: 100%; overflow-wrap: anywhere; }
+  .hero__sub, .hero__handle { max-width: 100%; min-width: 0; overflow-wrap: anywhere; }
 
   .conceito__grid,
   .sobre__grid,
@@ -1184,8 +1188,7 @@ ul { list-style: none; }
   .conceito__bg-img { display: none; }
   .conceito__codex-bg { background-attachment: scroll; opacity: 0.14; }
 
-  .portfolio__filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; scrollbar-width: thin; }
-  .filter { flex: 0 0 auto; min-height: 42px; }
+  .filter { min-height: 42px; }
   .portfolio__grid { columns: 2; column-gap: 4px; }
   .portfolio__item { margin-bottom: 4px; }
   .instagram__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1205,7 +1208,16 @@ ul { list-style: none; }
   .sobre__actions { flex-direction: column; }
   .numeros__grid { grid-template-columns: 1fr 1fr; }
 
-  .whatsapp-float { bottom: 20px; right: 16px; width: 48px; height: 48px; }
+  .portfolio__more { flex-direction: column; align-items: stretch; }
+  .portfolio__more .btn { width: 100%; }
+  .cuidados__list { grid-template-columns: 1fr; }
+
+  .whatsapp-float {
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    right: calc(16px + env(safe-area-inset-right));
+    width: 48px;
+    height: 48px;
+  }
 
   .btn { max-width: 100%; white-space: normal; text-align: center; }
   .orcamento__form,
@@ -1229,24 +1241,3 @@ ul { list-style: none; }
   .container { max-width: 1600px; }
   .hero__title { font-size: 18rem; }
 }
-
-/* Player preparado para um áudio real — sem autoplay ou som gerado. */
-.sound-console {
-  min-height: 230px;
-  padding: 28px;
-  border: 1px solid var(--gray-light);
-  background: var(--bg-4);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
-}
-.sound-console__top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gray-light); padding-bottom: 14px; }
-.sound-console__status, .sound-console__time, .sound-console__volume, .sound-console__note { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; }
-.sound-console__status { color: var(--gray); }
-.sound-console__time { color: var(--off-white); }
-.sound-console__play { align-self: flex-start; border: 0; background: none; color: var(--white); padding: 0; font: 500 0.82rem var(--font-body); letter-spacing: 0.18em; cursor: pointer; }
-.sound-console__play:disabled { color: var(--gray); cursor: not-allowed; }
-.sound-console__volume { display: grid; gap: 10px; color: var(--off-white); }
-.sound-console__volume input { width: 100%; accent-color: var(--white); }
-.sound-console__note { color: var(--gray); }
